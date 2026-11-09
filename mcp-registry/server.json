@@ -1,0 +1,14 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+  "name": "page.itsy/mcp",
+  "title": "itsy.page",
+  "description": "Build and publish tiny one-page websites by talking or typing to your assistant.",
+  "version": "1.2.0",
+  "websiteUrl": "https://itsy.page/developers",
+  "remotes": [
+    {
+      "type": "streamable-http",
+      "url": "https://api.itsy.page/mcp"
+    }
+  ]
+}

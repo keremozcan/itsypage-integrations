@@ -1,0 +1,11 @@
+{
+  "name": "itsy-page",
+  "version": "1.2.0",
+  "description": "Build and publish tiny one-page websites by talking or typing to your assistant.",
+  "contextFileName": "GEMINI.md",
+  "mcpServers": {
+    "itsy-page": {
+      "httpUrl": "https://api.itsy.page/mcp"
+    }
+  }
+}

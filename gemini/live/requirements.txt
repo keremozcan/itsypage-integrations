@@ -1,0 +1,4 @@
+google-genai>=2.31,<3
+mcp>=2.3,<3
+# Voice mode only; --text works without it.
+pyaudio>=0.2.14

@@ -1,0 +1,5 @@
+{
+  "$schema": "https://antigravity.google/schemas/v1/plugin.json",
+  "name": "itsy-page",
+  "description": "Build and publish tiny one-page websites by talking or typing to your assistant."
+}

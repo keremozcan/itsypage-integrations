@@ -1,0 +1,12 @@
+{
+  "name": "itsypage",
+  "owner": { "name": "itsy.page", "url": "https://itsy.page" },
+  "metadata": { "description": "Build tiny one-page websites from a conversation." },
+  "plugins": [
+    {
+      "name": "itsy-page",
+      "source": "./plugins/itsy-page",
+      "description": "Build and publish tiny one-page websites by talking or typing to your assistant."
+    }
+  ]
+}

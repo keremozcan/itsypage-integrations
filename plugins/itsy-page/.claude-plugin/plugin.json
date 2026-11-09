@@ -1,0 +1,14 @@
+{
+  "name": "itsy-page",
+  "displayName": "itsy.page",
+  "version": "1.2.0",
+  "description": "Build and publish tiny one-page websites by talking or typing to your assistant.",
+  "author": { "name": "itsy.page", "url": "https://itsy.page" },
+  "license": "UNLICENSED",
+  "homepage": "https://itsy.page/developers",
+  "documentationUrl": "https://itsy.page/developers",
+  "supportUrl": "https://itsy.page/contact",
+  "privacyPolicyUrl": "https://itsy.page/privacy",
+  "termsOfServiceUrl": "https://itsy.page/terms",
+  "keywords": ["website", "landing page", "link in bio", "invite", "mcp"]
+}

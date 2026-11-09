@@ -1,0 +1,8 @@
+{
+  "mcpServers": {
+    "itsy-page": {
+      "type": "http",
+      "url": "https://api.itsy.page/mcp"
+    }
+  }
+}

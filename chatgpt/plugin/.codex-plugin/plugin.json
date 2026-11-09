@@ -1,0 +1,29 @@
+{
+  "name": "itsy-page",
+  "version": "1.2.0",
+  "description": "Build and publish tiny one-page websites by talking or typing to your assistant.",
+  "author": {
+    "name": "Space Island Ltd",
+    "url": "https://itsy.page"
+  },
+  "homepage": "https://itsy.page/developers",
+  "license": "UNLICENSED",
+  "keywords": [
+    "website",
+    "landing page",
+    "link in bio",
+    "invite"
+  ],
+  "mcpServers": "./.mcp.json",
+  "interface": {
+    "displayName": "itsy.page",
+    "shortDescription": "One-page websites from a chat",
+    "longDescription": "itsy.page makes tiny one-page websites. Say what the page is for, and it is published at its own address, like ada-birthday.itsy.page.\n\nA page is a list of blocks. There are blocks for text, buttons, links, polls, countdowns, GIFs and random pickers. Contact and profile cards and embeds work too. Pick a theme, a colour and a font, and turn on emoji reactions if you like. Pages can be in English on itsy.page or in Turkish on minisayfa.com.\n\nThere are no accounts. When a page is published you get a secret edit link: it works like a password, so keep it. With it you can change, rename or take down the page later, in the chat or in the browser editor. You can have the link emailed to you. Photos and files are added in the browser editor.\n\nitsy.page is made by Space Island Ltd.",
+    "developerName": "Space Island Ltd",
+    "category": "Productivity",
+    "websiteURL": "https://itsy.page",
+    "privacyPolicyURL": "https://itsy.page/privacy",
+    "termsOfServiceURL": "https://itsy.page/terms",
+    "logo": "./assets/logo.png"
+  }
+}
