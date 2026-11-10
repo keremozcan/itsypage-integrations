@@ -21,9 +21,78 @@
     "longDescription": "itsy.page makes tiny one-page websites. Say what the page is for, and it is published at its own address, like ada-birthday.itsy.page.\n\nA page is a list of blocks. There are blocks for text, buttons, links, polls, countdowns, GIFs and random pickers. Contact and profile cards and embeds work too. Pick a theme, a colour and a font, and turn on emoji reactions if you like. Pages can be in English on itsy.page or in Turkish on minisayfa.com.\n\nThere are no accounts. When a page is published you get a secret edit link: it works like a password, so keep it. With it you can change, rename or take down the page later, in the chat or in the browser editor. You can have the link emailed to you. Photos and files are added in the browser editor.\n\nitsy.page is made by Space Island Ltd.",
     "developerName": "Space Island Ltd",
     "category": "Productivity",
+    "capabilities": [
+      "Interactive",
+      "Write"
+    ],
     "websiteURL": "https://itsy.page",
     "privacyPolicyURL": "https://itsy.page/privacy",
+    "supportURL": "https://itsy.page/contact",
     "termsOfServiceURL": "https://itsy.page/terms",
-    "logo": "./assets/logo.png"
+    "logo": "./assets/logo.png",
+    "defaultPrompt": [
+      "Make a page for my birthday party",
+      "Create a link-in-bio page for my bakery",
+      "Make a one-page menu for my café"
+    ]
+  },
+  "extensions": {
+    "com.openai": {
+      "review": {
+        "test_cases": {
+          "positive": [
+            {
+              "description": "Publish a new page from a description",
+              "prompt": "Make a page for my birthday party on July 20 at 7pm at Moda Park, with a countdown. Make it fun.",
+              "tools_triggered": "create_page",
+              "expected_behavior": "Publishes a public page and shows its address (https://<name>.itsy.page/) and a secret edit link (https://itsy.page/XXXX-XXXX-XXXX) in the itsy.page card, with the date, place and a countdown on the page."
+            },
+            {
+              "description": "Change a page's look and settings",
+              "prompt": "Change the colour of my page to green and turn off reactions.",
+              "tools_triggered": "update_page_settings",
+              "expected_behavior": "Uses the edit key from the page made earlier in the chat; the live page turns green and no longer shows emoji reactions."
+            },
+            {
+              "description": "Add content to an existing page",
+              "prompt": "Add a poll to my party page asking whether people want pizza or tacos.",
+              "tools_triggered": "get_page, update_page",
+              "expected_behavior": "Reads the page with its edit key, keeps every existing block and adds a pizza-or-tacos poll; the live page shows the poll."
+            },
+            {
+              "description": "Check a name, then publish a link-in-bio page",
+              "prompt": "Is the name crumbs-bakery free? If it is, make a link-in-bio page for my bakery Crumbs there with links to Instagram and my email hello@crumbs.example.",
+              "tools_triggered": "check_page_name, create_page",
+              "expected_behavior": "Says whether crumbs-bakery is free (or suggests another name), then publishes the page with an Instagram button and an email link and returns its address and edit link."
+            },
+            {
+              "description": "Email the secret edit link",
+              "prompt": "Email the edit link of my party page to me at <your address>.",
+              "tools_triggered": "email_edit_link",
+              "expected_behavior": "Sends one email from no-reply@itsy.page to that address with the page's secret edit link, and says it was sent."
+            }
+          ],
+          "negative": [
+            {
+              "description": "Online shop with a checkout (itsy.page makes single pages and takes no payments)",
+              "prompt": "Build me an online store for my candles with a shopping cart and card checkout."
+            },
+            {
+              "description": "Buying a domain name (itsy.page does not register domains)",
+              "prompt": "Register the domain crumbsbakery.com for me and point it at my site."
+            },
+            {
+              "description": "Making a logo or image (itsy.page does not generate images)",
+              "prompt": "Design a logo for my bakery Crumbs."
+            }
+          ]
+        },
+        "commerce": false,
+        "commerce_description": "itsy.page tools do not sell products or take payments. A premium publish code the user already bought on itsy.page can be redeemed when creating a page; no purchase happens in ChatGPT."
+      },
+      "publication": {
+        "release_notes": "First release: publish one-page websites from a chat, edit or delete them later with the secret edit link, and email the link to yourself."
+      }
+    }
   }
 }
